@@ -1,13 +1,13 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import todosData from "./todosData";
 
 function App() {
   return (
     <div className="todo-list">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      {
+        todosData.map( data => <TodoItem key={data.id} task={data} /> )
+      }
     </div>
   );
 }
