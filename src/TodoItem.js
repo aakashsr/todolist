@@ -1,10 +1,10 @@
 import React from "react";
 
-const TodoItem = ({task}) => {
+const TodoItem = ({item,handleConformation}) => {
   return (
     <div className="todo-item">
-      <input type="checkbox" checked={task.completed}/>
-      <p>{task.text}</p>
+      <input onChange={handleConformation} type="checkbox" checked={item.completed}/>
+      <p>{item.text}</p>
     </div>
   );
 }
